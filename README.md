@@ -38,3 +38,17 @@ print(f"Accuracy: {accuracy: .2f}")
 from sklearn.metrics import classification_report
 print(classification_report(y_test, y_pred))
 ```
+
+Finally, I displayed a confusion matrix with a heatmap to better understand the model's accuracy and performance, highlighting true positives, true negatives, false positives, and false negatives across classes.
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test, y_pred)
+plt.figure(figsize=(6, 5))
+sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=data.target_names, yticklabels=data.target_names)
+plt.title("Confusion Matrix")
+plt.xlabel("Predicted")
+plt.ylabel("True")
+plt.show()
+```
