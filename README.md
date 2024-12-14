@@ -19,7 +19,7 @@ X_scaled = scaler.fit_transform(X)
 print(f"X_scaled:\n{X_scaled}")
 ```
 
-Next, I split the data into training and testing sets using an 80-20 ratio, with 80% for training and 20% for testing, in order to ensure proper evaluation of the model's performance. I trained the model using Logistic Regression and evaluated its performance on the testing set. 
+Next, I split the data into training and testing sets using an 80-20 ratio, with 80% for training and 20% for testing, in order to ensure proper evaluation of the model's performance. I trained the model using Logistic Regression and evaluated its performance on the testing set. Then, I evaluated the accuracy to assess the effectiveness of the model, which, fortunately, was sufficiently high.
 ```python
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
